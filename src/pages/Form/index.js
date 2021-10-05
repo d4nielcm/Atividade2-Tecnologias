@@ -153,7 +153,6 @@ function Formulario() {
           <Row>
             {(cursoSelecionado === "Direito" || cursoSelecionado === "Computação") && (<>
             <Col className="col-md-6" style={{
-              boxShadow: '#000 1px 8px 10px',
               marginTop: "20px",
               borderRadius: "15px",
               marginRight: '20px'
@@ -167,30 +166,38 @@ function Formulario() {
                 }}>
                 {cursoSelecionado === "Direito" && (
                   <>
+                    <div className='diciplina'>
                     <input id="direito_civil"
                       className="checkbox-btn"
                       type="checkbox"
                       name="disciplinas[]" />
                     <label htmlFor="direito_civil" className="checkbox-label">Direito Civil</label>
+                    </div>
+                    <div className='diciplina'>
                     <input id="direito_penal"
                       className="checkbox-btn"
                       type="checkbox"
                       name="disciplinas[]" />
                     <label htmlFor="direito_penal" className="checkbox-label">Direito Penal</label>
+                    </div>
                   </>)
                 }
                 {cursoSelecionado === "Computação" && (
                   <>
+                  <div className='diciplina'>
                     <input id="inteligencia_artificial"
                       className="checkbox-btn"
                       type="checkbox"
                       name="disciplinas[]" />
                     <label htmlFor="inteligencia_artificial" className="checkbox-label">Inteligência Artificial</label>
+                    </div>
+                    <div className='diciplina'>
                     <input id="banco_de_dados"
                       className="checkbox-btn"
                       type="checkbox"
                       name="disciplinas[]" />
                     <label htmlFor="banco_de_dados" className="checkbox-label">Banco de dados</label>
+                    </div>                    
                   </>)
                 }
                 </Row>
@@ -199,7 +206,8 @@ function Formulario() {
             </>)}
             <Col className="col-md-4" style={{
               display: "flex",
-              alignItems: "flex-end"
+              alignItems: "flex-end",
+              
             }}>
               <button type='submit' className="btn mt-2 btn-success">Enviar</button>
             </Col>

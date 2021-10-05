@@ -1,8 +1,10 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+
+const bg = {backgroundColor: '#333'}
 function NavbarApp() {
   return (
-    <Navbar bg="dark" expand="lg" variant="dark">
+    <Navbar bg="light">
       <Container>
         <Navbar.Brand href="/">Teste 1</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
